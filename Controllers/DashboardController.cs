@@ -46,15 +46,19 @@ namespace ARUP.Controllers
             return Ok(grapghItems);
         }
 
-
+        /// <summary>
+        /// Used to display second row left
+        /// </summary>
+        /// <returns></returns>
         // GET: api/Dashboard/GetLikeliHood
-        [Route("api/dashboard/getlikelihoodstats")]
-        public IHttpActionResult GetLikeliHoodStats()
+        [Route("api/dashboard/getriskratingbreakdown")]
+        public IHttpActionResult GetRiskRatingBreakDown()
         {
             GrapghItem grapgh1 = new GrapghItem()
             {
                 Title = "Absolute Certainty",
                 value = "10",
+                Percentage = "40%",
                 Colour = "red",
                 CssClass = ""
 
@@ -101,92 +105,34 @@ namespace ARUP.Controllers
             return Ok(grapghItems);
         }
 
-        // GET: api/Dashboard/GetSeverityStats
-        [Route("api/dashboard/getseveritystats")]
-        public IHttpActionResult GetSeverityStats()
+        /// <summary>
+        /// Used to display second row middle
+        /// </summary>
+        /// <returns></returns>
+        // GET: api/Dashboard/GetHeatMap
+        [Route("api/dashboard/getriskheatmap")]
+        public IHttpActionResult GetRiskHeatMap()
         {
             GrapghItem grapgh1 = new GrapghItem()
             {
-                Title = "Fatality",
-                value = "4",
-                Colour = "red",
-                CssClass = ""
-
-            };
-            GrapghItem grapgh2 = new GrapghItem()
-            {
-                Title = "Major Injury",
-                value = "6",
-                Colour = "red",
-                CssClass = ""
-
-            };
-            GrapghItem grapgh3 = new GrapghItem()
-            {
-                Title = "Significant Injury",
-                value = "10",
-                Colour = "red",
-                CssClass = ""
-
-            };
-            GrapghItem grapgh4 = new GrapghItem()
-            {
-                Title = "Lost-Time Injury",
+                Title = "Active1",
                 value = "20",
                 Colour = "red",
                 CssClass = ""
 
             };
-            GrapghItem grapgh5 = new GrapghItem()
-            {
-                Title = "First Aid Case",
-                value = "30",
-                Colour = "red",
-                CssClass = ""
-
-            };
-
-            List<GrapghItem> grapghItems = new List<GrapghItem>();
-            grapghItems.Add(grapgh1);
-            grapghItems.Add(grapgh2);
-            grapghItems.Add(grapgh3);
-            grapghItems.Add(grapgh4);
-            grapghItems.Add(grapgh5);
-            return Ok(grapghItems);
-        }
-
-        // GET: api/Dashboard/GetCategoriesStats
-        [Route("api/dashboard/getlifecyclessstats")]
-        public IHttpActionResult GetLifecyclesStats()
-        {
-            GrapghItem grapgh1 = new GrapghItem()
-            {
-                Title = "Construction",
-                value = "52",
-                Colour = "red",
-                CssClass = ""
-
-            };
             GrapghItem grapgh2 = new GrapghItem()
             {
-                Title = "Maintenance",
-                value = "42",
+                Title = "Continue1",
+                value = "30",
                 Colour = "red",
                 CssClass = ""
 
             };
             GrapghItem grapgh3 = new GrapghItem()
             {
-                Title = "Operation",
-                value = "70",
-                Colour = "red",
-                CssClass = ""
-
-            };
-            GrapghItem grapgh4 = new GrapghItem()
-            {
-                Title = "Demolition",
-                value = "10",
+                Title = "Resolved1",
+                value = "20",
                 Colour = "red",
                 CssClass = ""
 
@@ -196,13 +142,17 @@ namespace ARUP.Controllers
             grapghItems.Add(grapgh1);
             grapghItems.Add(grapgh2);
             grapghItems.Add(grapgh3);
-            grapghItems.Add(grapgh4);
             return Ok(grapghItems);
         }
 
+        /// <summary>
+        /// Used to display second row right side
+        /// </summary>
+        /// <returns></returns>
+
         // GET: api/Dashboard/GetHeatMap
-        [Route("api/dashboard/getheatmap")]
-        public IHttpActionResult GetHeatMap()
+        [Route("api/dashboard/getactionplanbreakdown")]
+        public IHttpActionResult GetActionPlanBreakDown()
         {
             GrapghItem grapgh1 = new GrapghItem()
             {
@@ -236,6 +186,61 @@ namespace ARUP.Controllers
             return Ok(grapghItems);
         }
 
+        /// <summary>
+        /// Used to display third row right side
+        /// </summary>
+        /// <returns></returns>
+        // GET: api/Dashboard/GetSeverityStats
+        [Route("api/dashboard/getprojectrisks")]
+        public IHttpActionResult GetProjectRisks()
+        {
+            GrapghItem grapgh1 = new GrapghItem()
+            {
+                Title = "Ritz",
+                value = "20",
+                Colour = "red",
+                CssClass = "",
+                Low = 10,
+                Medium = 15,
+                High = 8
+
+            };
+            GrapghItem grapgh2 = new GrapghItem()
+            {
+                Title = "Dell",
+                value = "30",
+                Colour = "red",
+                CssClass = "",
+                Low = 12,
+                Medium = 4,
+                High = 8
+
+            };
+            GrapghItem grapgh3 = new GrapghItem()
+            {
+                Title = "HP",
+                value = "20",
+                Colour = "red",
+                CssClass = "",
+                Low = 2,
+                Medium = 1,
+                High = 3
+
+            };
+
+            List<GrapghItem> grapghItems = new List<GrapghItem>();
+            grapghItems.Add(grapgh1);
+            grapghItems.Add(grapgh2);
+            grapghItems.Add(grapgh3);
+            return Ok(grapghItems);
+
+            return Ok(grapghItems);
+        }
+
+        /// <summary>
+        /// used to display third row left
+        /// </summary>
+        /// <returns></returns>
         // GET: api/Dashboard/GetDisciplineStats
         [Route("api/dashboard/getdisciplinestats")]
         public IHttpActionResult GetDisciplineStats()
@@ -280,42 +285,5 @@ namespace ARUP.Controllers
             grapghItems.Add(grapgh3);
             return Ok(grapghItems);
         }
-
-        // GET: api/Dashboard/GetHeatMap
-        [Route("api/dashboard/getprojectslifecyclestagestats")]
-        public IHttpActionResult GetProjectsLifeCycleStageStats()
-        {
-            GrapghItem grapgh1 = new GrapghItem()
-            {
-                Title = "Active",
-                value = "20",
-                Colour = "red",
-                CssClass = ""
-
-            };
-            GrapghItem grapgh2 = new GrapghItem()
-            {
-                Title = "Continue",
-                value = "30",
-                Colour = "red",
-                CssClass = ""
-
-            };
-            GrapghItem grapgh3 = new GrapghItem()
-            {
-                Title = "Resolved",
-                value = "20",
-                Colour = "red",
-                CssClass = ""
-
-            };
-
-            List<GrapghItem> grapghItems = new List<GrapghItem>();
-            grapghItems.Add(grapgh1);
-            grapghItems.Add(grapgh2);
-            grapghItems.Add(grapgh3);
-            return Ok(grapghItems);
-        }
-
     }
 }
