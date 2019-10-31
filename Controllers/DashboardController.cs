@@ -56,7 +56,7 @@ namespace ARUP.Controllers
         {
             GrapghItem grapgh1 = new GrapghItem()
             {
-                Title = "Absolute Certainty",
+                Title = "Low Risk",
                 Value = "10",
                 Percentage = "40%",
                 Color = "#F69F02",
@@ -65,43 +65,26 @@ namespace ARUP.Controllers
             };
             GrapghItem grapgh2 = new GrapghItem()
             {
-                Title = "Very Likely",
+                Title = "Medium Risk",
                 Value = "30",
+                Percentage = "20%",
                 Color = "#CD4026",
                 CssClass = ""
 
             };
             GrapghItem grapgh3 = new GrapghItem()
             {
-                Title = "Likely",
+                Title = "High Risk",
                 Value = "18",
                 Color = "#7BBB4B",
                 CssClass = ""
 
             };
-            GrapghItem grapgh4 = new GrapghItem()
-            {
-                Title = "Unlikely",
-                Value = "20",
-                Color = "#757479",
-                CssClass = ""
-
-            };
-            GrapghItem grapgh5 = new GrapghItem()
-            {
-                Title = "Remote",
-                Value = "30",
-                Color = "#7C509B",
-                CssClass = ""
-
-            };
-
+          
             List<GrapghItem> grapghItems = new List<GrapghItem>();
             grapghItems.Add(grapgh1);
             grapghItems.Add(grapgh2);
             grapghItems.Add(grapgh3);
-            grapghItems.Add(grapgh4);
-            grapghItems.Add(grapgh5);
             return Ok(grapghItems);
         }
 
