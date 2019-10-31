@@ -25,12 +25,25 @@ namespace ARUP.Controllers
             int eCount = risks.Where(x => x.EnvironmentalRisk == "E").Count();
             int pCount = risks.Where(x => x.ProgrammeRisk == "P").Count();
             int oCount = risks.Where(x => x.OtherRisk == "O").Count();
+
+            GrapghItem grapghT = new GrapghItem()
+            {
+                Title = "# of Risks",
+                Value = risks.Count().ToString(),
+                Percentage = "%",
+                Color = "#FE8D89",
+                CssClass = "",
+                Low = risks.Where(x => x.RiskScoreIdM == riskL).Count(),
+                Medium = risks.Where(x => x.RiskScoreIdM == riskM).Count(),
+                High = risks.Where(x => x.RiskScoreIdM == riskH).Count()
+
+            };
             GrapghItem grapghH = new GrapghItem()
             {
                 Title = "Health & Safety Risks",
                 Value = hCount.ToString(),
                 Percentage = (hCount * 100 / risks.Count()).ToString() + "%",
-                Color = string.Empty,
+                Color = "#3FA8D7",
                 CssClass = "",
                 Low = risks.Where(x => x.RiskScoreIdM == riskL && x.HAndSRisk == "H").Count(),
                 Medium = risks.Where(x => x.RiskScoreIdM == riskM && x.HAndSRisk == "H").Count(),
@@ -43,7 +56,7 @@ namespace ARUP.Controllers
                 Title = "Environmental Risks",
                 Value = eCount.ToString(),
                 Percentage = (eCount * 100 / risks.Count()).ToString() + "%",
-                Color = string.Empty,
+                Color = "#7CBA4B",
                 CssClass = "",
                 Low = risks.Where(x => x.RiskScoreIdM == riskL && x.EnvironmentalRisk == "E").Count(),
                 Medium = risks.Where(x => x.RiskScoreIdM == riskM && x.EnvironmentalRisk == "E").Count(),
@@ -55,7 +68,7 @@ namespace ARUP.Controllers
                 Title = "Programme Risks",
                 Value = pCount.ToString(),
                 Percentage = (pCount * 100 / risks.Count()).ToString() + "%",
-                Color = string.Empty,
+                Color = "#7C509B",
                 CssClass = "",
                 Low = risks.Where(x => x.RiskScoreIdM == riskL && x.ProgrammeRisk == "P").Count(),
                 Medium = risks.Where(x => x.RiskScoreIdM == riskM && x.ProgrammeRisk == "P").Count(),
@@ -67,13 +80,14 @@ namespace ARUP.Controllers
                 Title = "Other Risks",
                 Value = oCount.ToString(),
                 Percentage = (oCount * 100 / risks.Count()).ToString() + "%",
-                Color = string.Empty,
+                Color = "#757479",
                 CssClass = "",
                 Low = risks.Where(x => x.RiskScoreIdM == riskL && x.OtherRisk == "O").Count(),
                 Medium = risks.Where(x => x.RiskScoreIdM == riskM && x.OtherRisk == "O").Count(),
                 High = risks.Where(x => x.RiskScoreIdM == riskH && x.OtherRisk == "O").Count()
 
             };
+            grapghItems.Add(grapghT);
             grapghItems.Add(grapghE);
             grapghItems.Add(grapghO);
             grapghItems.Add(grapghH);
@@ -177,7 +191,7 @@ namespace ARUP.Controllers
                     Title = riskStatus.Name,
                     Value = item.Count().ToString(),
                     Percentage = (item.Count() * 100 / risks.Count()).ToString() + "%",
-                    Color = string.Empty,
+                    Color = GetColour(riskStatus.Name),
                     CssClass = "",
                     Low = risks.Where(x => x.RiskScoreIdM == riskL && x.RiskStatusId == item.Key).Count(),
                     Medium = risks.Where(x => x.RiskScoreIdM == riskM && x.RiskStatusId == item.Key).Count(),
@@ -272,6 +286,18 @@ namespace ARUP.Controllers
             else if (risk == "H")
             {
                 return "#7BBB4B";
+            }
+            else if (risk == "ACTIVE")
+            {
+                return "#CD4026";
+            }
+            else if (risk == "RESOLVED")
+            {
+                return "#7BBB4B";
+            }
+            else if (risk == "CONTINUED")
+            {
+                return "#FE8D89";
             }
 
             return string.Empty;

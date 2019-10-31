@@ -19,9 +19,7 @@ namespace ARUP.App_Start
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            //var cors = new EnableCorsAttribute("*", "*", "*"); //origin, headers, methods
-
-            //config.EnableCors(cors);
+            // config.EnableCors();
 
             //By default Web API return XML data  
             //We can remove this by clearing the SupportedMediaTypes option as follows  
