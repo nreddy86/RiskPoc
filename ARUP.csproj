@@ -146,6 +146,7 @@
     <Compile Include="Context\DatabaseInitializer.cs" />
     <Compile Include="Controllers\AuditEntriesController.cs" />
     <Compile Include="Controllers\AuditsController.cs" />
+    <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IssuePurposesController.cs" />
