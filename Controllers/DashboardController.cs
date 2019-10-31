@@ -59,7 +59,7 @@ namespace ARUP.Controllers
                 Title = "Low Risk",
                 Value = "10",
                 Percentage = "40%",
-                Color = "#F69F02",
+                Color = "#7BBB4B",
                 CssClass = ""
 
             };
@@ -68,7 +68,7 @@ namespace ARUP.Controllers
                 Title = "Medium Risk",
                 Value = "30",
                 Percentage = "20%",
-                Color = "#CD4026",
+                Color = "#F69F02",
                 CssClass = ""
 
             };
@@ -76,7 +76,7 @@ namespace ARUP.Controllers
             {
                 Title = "High Risk",
                 Value = "18",
-                Color = "#7BBB4B",
+                Color = "#CD4026",
                 CssClass = ""
 
             };
