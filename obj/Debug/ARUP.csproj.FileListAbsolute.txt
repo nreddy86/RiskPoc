@@ -138,7 +138,6 @@ D:\Backup\Projects\CDSdigital\ARUP\ARUP\bin\EntityFramework.dll
 D:\Backup\Projects\CDSdigital\ARUP\ARUP\bin\EntityFramework.SqlServer.dll
 D:\Backup\Projects\CDSdigital\ARUP\ARUP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Backup\Projects\CDSdigital\ARUP\ARUP\bin\Microsoft.Web.Infrastructure.dll
-D:\Backup\Projects\CDSdigital\ARUP\ARUP\bin\Newtonsoft.Json.dll
 D:\Backup\Projects\CDSdigital\ARUP\ARUP\bin\System.Net.Http.Formatting.dll
 D:\Backup\Projects\CDSdigital\ARUP\ARUP\bin\System.Web.Helpers.dll
 D:\Backup\Projects\CDSdigital\ARUP\ARUP\bin\System.Web.Http.dll

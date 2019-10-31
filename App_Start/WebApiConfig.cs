@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json.Serialization;
 using System.Web.Http;
-using System.Web.Http.Cors;
+// using System.Web.Http.Cors;
 
 namespace ARUP.App_Start
 {
@@ -19,9 +19,9 @@ namespace ARUP.App_Start
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            var cors = new EnableCorsAttribute("*", "*", "*"); //origin, headers, methods
+            //var cors = new EnableCorsAttribute("*", "*", "*"); //origin, headers, methods
 
-            config.EnableCors(cors);
+            //config.EnableCors(cors);
 
             //By default Web API return XML data  
             //We can remove this by clearing the SupportedMediaTypes option as follows  
