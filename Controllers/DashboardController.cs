@@ -17,24 +17,24 @@ namespace ARUP.Controllers
             GrapghItem grapgh1 = new GrapghItem()
             {
                 Title = "Active",
-                value = "20",
-                Colour = "red",
+                Value = "20",
+                Color = "red",
                 CssClass = ""
 
             };
             GrapghItem grapgh2 = new GrapghItem()
             {
                 Title = "Continue",
-                value = "30",
-                Colour = "red",
+                Value = "30",
+                Color = "red",
                 CssClass = ""
 
             };
             GrapghItem grapgh3 = new GrapghItem()
             {
                 Title = "Resolved",
-                value = "80",
-                Colour = "red",
+                Value = "80",
+                Color = "red",
                 CssClass = ""
 
             };
@@ -57,41 +57,41 @@ namespace ARUP.Controllers
             GrapghItem grapgh1 = new GrapghItem()
             {
                 Title = "Absolute Certainty",
-                value = "10",
+                Value = "10",
                 Percentage = "40%",
-                Colour = "red",
+                Color = "#F69F02",
                 CssClass = ""
 
             };
             GrapghItem grapgh2 = new GrapghItem()
             {
                 Title = "Very Likely",
-                value = "30",
-                Colour = "red",
+                Value = "30",
+                Color = "#CD4026",
                 CssClass = ""
 
             };
             GrapghItem grapgh3 = new GrapghItem()
             {
                 Title = "Likely",
-                value = "18",
-                Colour = "red",
+                Value = "18",
+                Color = "#7BBB4B",
                 CssClass = ""
 
             };
             GrapghItem grapgh4 = new GrapghItem()
             {
                 Title = "Unlikely",
-                value = "20",
-                Colour = "red",
+                Value = "20",
+                Color = "#757479",
                 CssClass = ""
 
             };
             GrapghItem grapgh5 = new GrapghItem()
             {
                 Title = "Remote",
-                value = "30",
-                Colour = "red",
+                Value = "30",
+                Color = "#7C509B",
                 CssClass = ""
 
             };
@@ -116,24 +116,24 @@ namespace ARUP.Controllers
             GrapghItem grapgh1 = new GrapghItem()
             {
                 Title = "Active1",
-                value = "20",
-                Colour = "red",
+                Value = "20",
+                Color = "red",
                 CssClass = ""
 
             };
             GrapghItem grapgh2 = new GrapghItem()
             {
                 Title = "Continue1",
-                value = "30",
-                Colour = "red",
+                Value = "30",
+                Color = "red",
                 CssClass = ""
 
             };
             GrapghItem grapgh3 = new GrapghItem()
             {
                 Title = "Resolved1",
-                value = "20",
-                Colour = "red",
+                Value = "20",
+                Color = "red",
                 CssClass = ""
 
             };
@@ -157,24 +157,24 @@ namespace ARUP.Controllers
             GrapghItem grapgh1 = new GrapghItem()
             {
                 Title = "Active",
-                value = "20",
-                Colour = "red",
+                Value = "20",
+                Color = "#CD4026",
                 CssClass = ""
 
             };
             GrapghItem grapgh2 = new GrapghItem()
             {
                 Title = "Continue",
-                value = "30",
-                Colour = "red",
+                Value = "30",
+                Color = "#FE8D89",
                 CssClass = ""
 
             };
             GrapghItem grapgh3 = new GrapghItem()
             {
                 Title = "Resolved",
-                value = "20",
-                Colour = "red",
+                Value = "20",
+                Color = "#7BBB4B",
                 CssClass = ""
 
             };
@@ -197,8 +197,8 @@ namespace ARUP.Controllers
             GrapghItem grapgh1 = new GrapghItem()
             {
                 Title = "Ritz",
-                value = "20",
-                Colour = "red",
+                Value = "20",
+                Color = "red",
                 CssClass = "",
                 Low = 10,
                 Medium = 15,
@@ -208,8 +208,8 @@ namespace ARUP.Controllers
             GrapghItem grapgh2 = new GrapghItem()
             {
                 Title = "Dell",
-                value = "30",
-                Colour = "red",
+                Value = "30",
+                Color = "red",
                 CssClass = "",
                 Low = 12,
                 Medium = 4,
@@ -219,8 +219,8 @@ namespace ARUP.Controllers
             GrapghItem grapgh3 = new GrapghItem()
             {
                 Title = "HP",
-                value = "20",
-                Colour = "red",
+                Value = "20",
+                Color = "red",
                 CssClass = "",
                 Low = 2,
                 Medium = 1,
@@ -234,7 +234,6 @@ namespace ARUP.Controllers
             grapghItems.Add(grapgh3);
             return Ok(grapghItems);
 
-            return Ok(grapghItems);
         }
 
         /// <summary>
@@ -248,8 +247,8 @@ namespace ARUP.Controllers
             GrapghItem grapgh1 = new GrapghItem()
             {
                 Title = "GEN",
-                value = "20",
-                Colour = "red",
+                Value = "20",
+                Color = "red",
                 CssClass = "",
                 Low = 10,
                 Medium = 15,
@@ -259,8 +258,8 @@ namespace ARUP.Controllers
             GrapghItem grapgh2 = new GrapghItem()
             {
                 Title = "ELEC",
-                value = "30",
-                Colour = "red",
+                Value = "30",
+                Color = "red",
                 CssClass = "",
                 Low = 12,
                 Medium = 4,
@@ -270,8 +269,8 @@ namespace ARUP.Controllers
             GrapghItem grapgh3 = new GrapghItem()
             {
                 Title = "ACOU",
-                value = "20",
-                Colour = "red",
+                Value = "20",
+                Color = "red",
                 CssClass = "",
                 Low = 2,
                 Medium = 1,
